@@ -7,3 +7,10 @@ public class BankAccount {
 
     public BankAccount() {
     }
+
+ public BankAccount(long accountNumber, String name, double balance) {
+        this.accountNumber = accountNumber;
+        this.name = name;
+        this.balance = balance;
+        System.out.println("BankAccount Create Successful");
+    }
