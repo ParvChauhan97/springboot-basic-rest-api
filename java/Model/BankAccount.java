@@ -20,3 +20,8 @@ public String display() {
                 "Account Number: " + accountNumber +"\n" +
                 "Balance: " + balance;
     }
+
+public  void deposit(double amount) {
+        balance += amount;
+        System.out.println("Deposit Successful");
+    }
