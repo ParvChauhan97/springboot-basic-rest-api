@@ -14,3 +14,9 @@ public class BankAccount {
         this.balance = balance;
         System.out.println("BankAccount Create Successful");
     }
+
+public String display() {
+        return "Name: " + name +"\n" +
+                "Account Number: " + accountNumber +"\n" +
+                "Balance: " + balance;
+    }
