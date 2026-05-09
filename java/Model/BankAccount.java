@@ -25,3 +25,8 @@ public  void deposit(double amount) {
         balance += amount;
         System.out.println("Deposit Successful");
     }
+
+public void withdraw(double amount) {
+            balance -= amount;
+            System.out.println("Withdraw Successful");
+    }
