@@ -9,4 +9,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/account")
 public class BankController {
   
+  private final BankService bankservice;
+    public BankController(BankService bankservice) {
+        this.bankservice = bankservice;
+    }
 }
