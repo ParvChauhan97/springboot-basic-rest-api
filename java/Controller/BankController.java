@@ -13,4 +13,12 @@ public class BankController {
     public BankController(BankService bankservice) {
         this.bankservice = bankservice;
     }
+
+  @PostMapping("/createuser")
+    public ResponseEntity<?> createAccount(@RequestBody long accountNumber,
+                                           @RequestBody String name) {
+        boolean check = bankservice.createAccount(accountNumber, name);
+        if (check) return ResponseEntity.status(HttpStatus.CREATED).body("Success");
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Please Enter Right Information");
+    }
 }
