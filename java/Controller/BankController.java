@@ -29,4 +29,12 @@ if (check) return ResponseEntity.ok("Deposit Successful");
 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Please Enter Right Information");
 }
 
+@PutMapping("/withdraw")  
+public ResponseEntity<?> withdraw(@RequestParam long accountNumber,  
+                                            @RequestParam double amount) {  
+    boolean check = bankservice.withdraw(accountNumber, amount);  
+    if (check) return ResponseEntity.ok("Withdraw Successful");  
+    return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Please Enter Right Information");  
+}  
+
 }
