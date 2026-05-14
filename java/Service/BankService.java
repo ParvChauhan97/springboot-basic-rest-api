@@ -21,7 +21,8 @@ public class BankService {
             BankAccount acc = map.get(accountNumber);
                 acc.deposit(amount);
                 return true;
-        } return false;
+        } 
+        return false;
     }
 
     public boolean withdraw(long accountNumber, double amount) {
@@ -31,7 +32,8 @@ public class BankService {
                 acc.withdraw(amount);
                 return true;
             }
-        } return false;
+        } 
+        return false;
     }
 
     public boolean transfer(long sender, long receiver, double amount) {
