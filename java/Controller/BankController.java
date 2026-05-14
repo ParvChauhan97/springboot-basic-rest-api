@@ -37,4 +37,13 @@ public ResponseEntity<?> withdraw(@RequestParam long accountNumber,
     return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Please Enter Right Information");  
 }  
 
+  @PutMapping("/transfer")
+    public ResponseEntity<?> transfer(@RequestParam long sender,
+                                                @RequestParam long receiver,
+                                                @RequestParam double amount) {
+        boolean check = bankservice.transfer(sender, receiver, amount);
+        if(check) return ResponseEntity.ok( "Transfer Successful");
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Enter Right Information");
+    }
+  
 }
