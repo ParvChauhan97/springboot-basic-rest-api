@@ -23,7 +23,7 @@ public class BankController {
 
 @PutMapping("/deposit")
     public ResponseEntity<?> deposit(@RequestParam long accountNumber,
-                                               @RequestParam double amount) {
+                                     @RequestParam double amount) {
         boolean check = bankservice.deposit(accountNumber, amount);
         if (check) return ResponseEntity.ok("Deposit Successful");
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Please Enter Right Information");
