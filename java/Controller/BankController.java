@@ -45,5 +45,10 @@ public ResponseEntity<?> withdraw(@RequestParam long accountNumber,
         if(check) return ResponseEntity.ok( "Transfer Successful");
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Enter Right Information");
     }
+
+  @GetMapping("/display")
+    public ResponseEntity<?> display(@RequestParam long accountNumber) {
+        return ResponseEntity.ok(bankservice.display(accountNumber));
+    }
   
 }
