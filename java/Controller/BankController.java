@@ -50,5 +50,10 @@ public ResponseEntity<?> withdraw(@RequestParam long accountNumber,
     public ResponseEntity<?> display(@RequestParam long accountNumber) {
         return ResponseEntity.ok(bankservice.display(accountNumber));
     }
-  
+
+  @GetMapping("/displayall")
+    public ResponseEntity<?> displayAll() {
+        return ResponseEntity.ok(bankservice.displayall());
+    }
+
 }
