@@ -13,7 +13,7 @@ public class BankController {
     public BankController(BankService bankservice) {
         this.bankservice = bankservice;
     }
-
+  
   @PostMapping("/createuser")
     public ResponseEntity<?> createAccount(@RequestBody long accountNumber,
                                            @RequestBody String name) {
