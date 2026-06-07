@@ -21,7 +21,7 @@ public class BankController {
         if (check) return ResponseEntity.status(HttpStatus.CREATED).body("Success");
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Please Enter Right Information");
     }
-
+  
 @PutMapping("/deposit")
     public ResponseEntity<?> deposit(@RequestParam long accountNumber,
                                      @RequestParam double amount) {
