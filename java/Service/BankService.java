@@ -16,7 +16,7 @@ public class BankService {
         return false;
     }
 
-    public boolean deposit(long accountNumber, double amount) {
+     public boolean deposit(long accountNumber, double amount) {
         if (map.containsKey(accountNumber)) {
             BankAccount acc = map.get(accountNumber);
                 acc.deposit(amount);
